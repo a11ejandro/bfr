@@ -12,7 +12,7 @@ class UrlChecker
 
     # Consider redirects
     if head.code[0] == '3' && head['location']
-      return UrlChecker.check(url: head['location'])
+      return self.check(url: head['location'])
     end
 
     result[:status] = head.code
